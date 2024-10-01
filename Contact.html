@@ -12,7 +12,6 @@
         <nav>
             <a href="Index.html">Home</a>
             <a href="About.html">About</a>
-            <a href="Skills.html">Skills</a>
             <a href="Projects.html">Projects</a>
             <a href="Hobbies.html">Hobbies</a>
         </nav>
@@ -23,7 +22,7 @@
             <h2>Get in Touch</h2>
             <p>If you have any questions or would like to discuss a project, feel free to reach out! You can fill out the form below or connect with me through my social media channels.</p>
 
-            <form action="#" method="post">
+            <form id="contactForm" action="https://formspree.io/f/your_formspree_endpoint" method="POST">
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required><br>
 
@@ -35,6 +34,8 @@
 
                 <input type="submit" value="Send Message">
             </form>
+
+            <p><em>kanishkaraghuvanshi97@gmail.com</em></p>
 
             <div class="address">
                 <h3>My Address</h3>
@@ -48,23 +49,28 @@
                 <h3>Connect with Me</h3>
                 <p>You can also find me on:</p>
                 <ul>
-                    <li><a href="https://www.linkedin.com/feed/">LinkedIn</a></li>
-                    <li><a href="https://github.com/rkanishka/myproject">GitHub</a></li>
-                   
-                    
+                    <li><a href="https://www.linkedin.com/in/kanishka-raghuvanshi-11564528b/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/rkanishka/myproject" target="_blank">GitHub</a></li>
                 </ul>
             </div>
         </section>
     </div>
+
     <footer class="page-footer">
-      <p>Find me on</p>
-      <div class="social-icons">
-          <a href="https://github.com/rkanishka/myproject" target="_blank"><img height="30" width="30" src="image/github.svg" alt="GitHub"></a>
-          
-          <a href="https://www.linkedin.com/feed/" target="_blank"><img height="30" width="30" src="image/linkdin.svg" alt="LinkedIn"></a>
-      </div>
-  </footer>
-    
-   
+        <p>Find me on</p>
+        <div class="social-icons">
+            <a href="https://github.com/rkanishka/myproject" target="_blank"><img height="30" width="30" src="image/github.svg" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/kanishka-raghuvanshi-11564528b/" target="_blank"><img height="30" width="30" src="image/linkdin.svg" alt="LinkedIn"></a>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        alert("Thank you for your message! I'll get back to you soon.");
+        this.reset(); 
+    });
+    </script>
 </body>
 </html>
